@@ -1,0 +1,52 @@
+---
+const prices = [
+  {
+    title: "Custom Pieces",
+    price: "Starting at $500",
+    description: "Perfect for individual furniture pieces and small projects",
+    features: [
+      "Premium materials",
+      "Custom design consultation",
+      "1-year warranty",
+      "2-3 weeks delivery"
+    ]
+  },
+  {
+    title: "Complete Projects",
+    price: "Starting at $2000",
+    description: "Ideal for full room installations and complex projects",
+    features: [
+      "Luxury materials selection",
+      "Detailed project planning",
+      "3-year warranty",
+      "4-6 weeks delivery",
+      "Priority support"
+    ]
+  }
+];
+---
+<section id="pricing" class="py-24 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-4">Investment in Quality</h2>
+    <p class="text-gray-600 text-center mb-16 max-w-2xl mx-auto">Each project is uniquely priced based on materials, complexity, and scope. Here's a general guide to our pricing structure.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {prices.map(plan => (
+        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+          <h3 class="text-2xl font-bold text-blue-900 mb-2">{plan.title}</h3>
+          <p class="text-3xl font-bold text-blue-600 mb-4">{plan.price}</p>
+          <p class="text-gray-600 mb-8">{plan.description}</p>
+          <ul class="space-y-4">
+            {plan.features.map(feature => (
+              <li class="flex items-center text-gray-700">
+                <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+<section class="relative h-screen">
+  <div class="absolute inset-0">
+    <img 
+      src="https://www.checkatrade.com/blog/wp-content/uploads/2022/10/best-carpenter-hand-tools.jpg"
+      alt="Professional woodworking tools"
+      class="w-full h-full object-cover"
+      onerror="this.onerror=null; this.src='https://images.pexels.com/photos/3637786/pexels-photo-3637786.jpeg'"
+    />
+    <div class="absolute inset-0 bg-black/60"></div>
+  </div>
+  
+  <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+    <div class="max-w-xl text-white">
+      <div id="carpenter-info" class="mb-8">
+        <!-- Content will be injected here by JavaScript -->
+      </div>
+
+
+
+      
+
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+    <a 
+      href="#services" 
+      class="rounded-full border border-white bg-black/50 px-4 py-2 text-white transition hover:bg-amber-400 hover:text-black"
+    >
+      ↓ Explore Services
+    </a>
+  </div>
+</section>
+
+<script>
+  // Define the carpenter info object
+  const carpenterInfo = {
+    name: "Darla Chinni",
+    title: "All in one stop",
+    experience: "25+ Years of Excellence",
+  };
+
+  // Inject the carpenter info into the DOM
+  const carpenterInfoDiv = document.getElementById('carpenter-info');
+  carpenterInfoDiv.innerHTML = `
+    <h1 class="text-5xl font-extrabold mb-2">${carpenterInfo.name}</h1>
+    <p class="text-xl text-amber-400 font-semibold">${carpenterInfo.title}</p>
+    <p class="text-lg text-gray-300">${carpenterInfo.experience}</p>
+  `;
+</script>
